@@ -28,6 +28,7 @@ You can pass all the cli commands you would normally pass to your app:
 save-run [bash command]
 nodemon wraps your application, so you can pass all the arguments you would normally pass to your app:
 
+```
 // On every change restart server.
 save-run node ./server.js 
 
@@ -36,5 +37,6 @@ saveRun npm test
 
 // On every change run git add .
 saveRun git add .
+```
 
 Any output from this script is prefixed with [save-run], otherwise all output from your application, errors included, will be echoed out as expected.
