@@ -4,8 +4,12 @@ const { watch } = require('chokidar')
 const { execSync } = require('child_process')
 const { throttle } = require('lodash')
 
-const saveRun = () => execSync(process.argv.slice(2).join(' '), { stdio: 'inherit' })
+const argument = process.argv.slice(2).join(' ')
+const option = { stdio: 'inherit' }
 
-const throttle_saveRun = throttle(saveRun, 1000)
+const _run = () => execSync(argument, option)
+const run = throttle(_run, 1000)
 
-watch('.').on('change', saveRun)
+// run script
+run()
+watch('.').on('change', run)
