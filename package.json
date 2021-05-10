@@ -6,6 +6,6 @@
   "license": "MIT",
   "dependencies": {
     "chokidar": "^3.3.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
