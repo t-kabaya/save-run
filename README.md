@@ -4,7 +4,7 @@ Automatically run shell command when file changes in the directory are detected.
 # Usage
 
 ```bash
-npx sav-run [bash command]
+npx save-run [bash command]
 ```
 
 You can pass all the cli commands you would normally pass to your app:
