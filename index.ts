@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-const { watch } = require('chokidar')
-const { execSync } = require('child_process')
-const { throttle } = require('lodash')
+import { watch }  from 'chokidar'
+import  { execSync } from 'child_process'
+import { throttle } from 'lodash'
 
 const argument = process.argv.slice(2).join(' ')
 const option = { stdio: 'inherit' }
 
+// @ts-ignore
 const _run = () => execSync(argument, option)
 const run = throttle(_run, 1000)
 
